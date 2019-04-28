@@ -15,7 +15,7 @@ def main(dset):
     X = dset.data 
     y = dset.target 
     
-    X_train, X_test, y_train, y_test = train_test_split(X, y, random_state = random.randint(1,101)) 
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = .8, random_state = random.randint(1,101)) 
     
     svm_model_linear = SVC(kernel = 'linear', C = 1).fit(X_train, y_train) 
     svm_predictions = svm_model_linear.predict(X_test) 
