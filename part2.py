@@ -25,5 +25,7 @@ def main(dset):
     plt.ylabel('Truth')
     plt.show()
 
+print "iris",
 main(iris)
+print "wine",
 main(wine)
